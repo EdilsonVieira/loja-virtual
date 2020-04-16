@@ -13,6 +13,13 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+import localePtExtra from '@angular/common/locales/extra/pt';
+
+// the second parameter 'pt-BR' is optional
+registerLocaleData(localePt, 'pt-BR', localePtExtra);
+
 @NgModule({
   imports: [
     BrowserModule,
