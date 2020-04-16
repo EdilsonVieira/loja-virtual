@@ -10,7 +10,7 @@ export const products = [
     description: 'Um ótimo telefone com uma das melhores cameras.'
   },
   {
-    name: 'Padrão',
+    name: 'Celular Padrão',
     price: 299,
     description: 'Um telefone básico e mais acessível.'
   }
