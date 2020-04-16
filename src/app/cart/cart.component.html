@@ -2,11 +2,11 @@
 <div *ngIf="items_total==0">O carrinho está vazio.</div>
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
-  <span>{{ item.price | currency : 'R$' }}</span>
+  <span>{{ item.price | currency }}</span>
 </div>
 <div class="cart-total" *ngIf="items_total>0">
   <span>Total</span>
-  <span>{{items_total | currency : 'R$'}}</span>
+  <span>{{ items_total | currency }}</span>
 </div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" *ngIf="items_total>0">

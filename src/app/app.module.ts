@@ -13,12 +13,11 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 
+import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
-import localePt from '@angular/common/locales/pt';
-import localePtExtra from '@angular/common/locales/extra/pt';
+import localePtBR from '@angular/common/locales/pt';
 
-// the second parameter 'pt-BR' is optional
-registerLocaleData(localePt, 'pt-BR', localePtExtra);
+registerLocaleData(localePtBR);
 
 @NgModule({
   imports: [
@@ -42,7 +41,10 @@ registerLocaleData(localePt, 'pt-BR', localePtExtra);
     ShippingComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [ CartService ]
+  providers: [ CartService, 
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL'}
+  ]
 })
 export class AppModule { }
 

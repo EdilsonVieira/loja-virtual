@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
-
+  
+  current_date = new Date();
+  
   constructor() { }
 
   ngOnInit() {
