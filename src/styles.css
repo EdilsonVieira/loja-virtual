@@ -138,7 +138,6 @@ app-top-bar h1 {
 
 .cart-total {
   width: 100%;
-  min-width: 400px;
   max-width: 450px;
   display: flex;
   flex-direction: row;
